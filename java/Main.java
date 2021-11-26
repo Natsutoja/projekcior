@@ -11,7 +11,12 @@ public class Main {
         Customer customer2=new Customer("Maciej","Bozy","120966997","Krysztalow 2","topek997@gmail.com",26,false);
         do {
             System.out.println("1.Pracownicy dane    2.Pracownicy szczegóły    3.Klienci dane    4.Klienci szczegóły");
-
+             /**
+             * Funkcja zmienna pozwala na wybranie konkretnych danych,które chcemy uzyskac(ogolnych lub szczegolowych)
+             * Funkcja dalej pozwala na zapętlanie pętli lub przerwanie jej w dowolnym momencie.
+             * @author Kamil Kuchciński
+             * @author Kacper Niewiadomski
+             */
             zmienna = scanner.nextInt();
             switch (zmienna) {
                 case 1:
