@@ -11,6 +11,15 @@ public class Main {
         Worker worker2 = new Worker("Karol","Czosnek","596600134","Kolorowa 1","Koxtotalny@gmail.com","magazynier",21,4000.00);
         Customer customer1=new Customer("Mateusz","Jamnik","688123456","Bratana 5","Komputer213@gmail.com",18,true);
         Customer customer2=new Customer("Maciej","Bozy","120966997","Krysztalow 2","topek997@gmail.com",26,false);
+        Accessories miska1=new Accessories("Ceramiczna","Brazowy","25");
+        Accessories miska2=new Accessories("Metalowa","Stalowy","17");
+        Accessories miska3=new Accessories("Plastikowa","Rozowy","11");
+        Accessories klatka1=new Accessories("Stal","3X2M","300");
+        Accessories klatka2=new Accessories("Stal","5X3M","600");
+        Accessories klatka3=new Accessories("Stal","10X6M","900");
+        Accessories karma1=new Accessories()("Royal Canin","1kg","120");
+        Accessories karma2=new Accessories()("Brit Care","0.5kg","55");
+        Accessories karma2=new Accessories()("Rinti Gold","100g","11");
         System.out.println("Login: ");
         login = scanner.nextLine();
         System.out.println("Hasło: ");
