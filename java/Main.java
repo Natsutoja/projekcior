@@ -53,7 +53,7 @@ public class Main {
             } while (dalej == 0);
         }
 
-        else if(login.equals("pracownik") && haslo.equals("admin")) {
+        else if(login.equals("pracownik") && haslo.equals("praca")) {
 
 
 
