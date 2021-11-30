@@ -17,9 +17,9 @@ public class Main {
         Accessories klatka1=new Accessories("Stal","3X2M","300");
         Accessories klatka2=new Accessories("Stal","5X3M","600");
         Accessories klatka3=new Accessories("Stal","10X6M","900");
-        Accessories karma1=new Accessories()("Royal Canin","1kg","120");
-        Accessories karma2=new Accessories()("Brit Care","0.5kg","55");
-        Accessories karma2=new Accessories()("Rinti Gold","100g","11");
+        Accessories karma1=new Accessories("Royal Canin","1kg","120");
+        Accessories karma2=new Accessories("Brit Care","0.5kg","55");
+        Accessories karma2=new Accessories("Rinti Gold","100g","11");
         System.out.println("Login: ");
         login = scanner.nextLine();
         System.out.println("Hasło: ");
