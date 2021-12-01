@@ -116,7 +116,7 @@ public class Main {
 
                                             case 1:
 
-                                                System.out.println("miski: ");
+                                                System.out.println("Miski: ");
                                                 System.out.println("1. ");
                                                 miska1.Miska();
                                                 System.out.println("2. ");
@@ -178,7 +178,7 @@ public class Main {
 
                                                 break;
                                             case 3:
-                                                System.out.println("karmy: ");
+                                                System.out.println("Karmy: ");
                                                 System.out.println("1. ");
                                                 karma1.Karma();
                                                 System.out.println("2. ");
@@ -240,7 +240,7 @@ public class Main {
 
                                 case 1:
 
-                                    System.out.println("miski: ");
+                                    System.out.println("Miski: ");
                                     System.out.println("1. ");
                                     miska1.Miska();
                                     System.out.println("2. ");
@@ -302,7 +302,7 @@ public class Main {
 
                                     break;
                                 case 3:
-                                    System.out.println("karmy: ");
+                                    System.out.println("Karmy: ");
                                     System.out.println("1. ");
                                     karma1.Karma();
                                     System.out.println("2. ");
