@@ -16,7 +16,7 @@ public class Worker extends Person  {
      * @author Kacper Niewiadomski
      */
     public void Dane(){
-        System.out.printf(imie + " " + nazwisko + " " + stanowisko + " " + placa + "\n");
+        System.out.printf("Imie: " + imie + "\n" + "Nazwisko: " + nazwisko + "\n" + "Stanowisko: " + stanowisko + "\n" + "placa: " + placa + "\n");
     }
     /**
      * Wyswietla szczegolowe informacje o pracowniku
@@ -24,7 +24,7 @@ public class Worker extends Person  {
      * @author Kacper Niewiadomski
      */
     public void Szczegoly(){
-        System.out.println(imie + " " + nazwisko + " " + stanowisko + " " + placa + " " + nrtel + " " + adress + " " + email + " " + id + "\n");
+        System.out.println("Imie: " + imie + "\n" + "Nazwisko: " + nazwisko + "\n" + "Stanowisko: " + stanowisko + "\n" + "placa: " + placa + "\n" + "numer telefonu: " + nrtel + "\n" + "Adres: " + adress + "\n" + "E-mail: " + email + "\n" + "Id: " + id + "\n");
     }
 
 }
