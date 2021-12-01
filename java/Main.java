@@ -22,6 +22,15 @@ public class Main {
         Accessories karma1 = new Accessories("", "Royal Canin", "", "120", "", "1kg");
         Accessories karma2 = new Accessories("", "Brit Care", "", "55", "", "0.5kg");
         Accessories karma3 = new Accessories("", "Rinti Gold", "", "11", "", "100g");
+        Animals chomik1 = new Animals("Syryjski","80g","5 tyg","samiec","35");
+        Animals chomik2 = new Animals("Dzungarski","100g","11 tyg","samica","50");
+        Animals chomik3 = new Animals("Chinski","115g","20 tyg","samiec","20");
+        Animals szczur1 = new Animals("Domowy","70g","2 tyg","samica","15");
+        Animals szczur2 = new Animals("Labolatoryjny","105g","33 tyg","samiec","25");
+        Animals szczur3 = new Animals("Sniady","110g","15 tyg","samiec","30");
+        Animals papuga1 = new Animals("Ara","1kg","6 lat","samiec","10000");
+        Animals papuga2 = new Animals("Amazonka","500g","15 lat","samica ","2200");
+        Animals papuga3 = new Animals("Nimfy","80g","4 lata","samica","120");
 
             do {
                 System.out.println("1.logowanie   2.wyjście");
