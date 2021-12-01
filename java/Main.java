@@ -1,27 +1,4 @@
-import java.util.Scanner;
-
-public class Main {
-    public static void main(String[] args) {
-        int zmienna;
-        int dalej;
-        String login;
-        String haslo;
-        Scanner scanner = new Scanner(System.in);
-        Worker worker1 = new Worker("Przemyslaw","Skrzynka","984123609","Lombardowa 2/3","przemos@gmail.com","kasjer",8,3500.00);
-        Worker worker2 = new Worker("Karol","Czosnek","596600134","Kolorowa 1","Koxtotalny@gmail.com","magazynier",21,4000.00);
-        Customer customer1=new Customer("Mateusz","Jamnik","688123456","Bratana 5","Komputer213@gmail.com",18,true);
-        Customer customer2=new Customer("Maciej","Bozy","120966997","Krysztalow 2","topek997@gmail.com",26,false);
-        Accessories miska1=new Accessories("Ceramiczna","Brazowy","25"," ","","");
-        Accessories miska2=new Accessories("Metalowa","Stalowy","17","","","");
-        Accessories miska3=new Accessories("Plastikowa","Rozowy","11","","","");
-        Accessories klatka1=new Accessories("Stal","","300","3X2M","","");
-        Accessories klatka2=new Accessories("Stal","","600","5X3M","","");
-        Accessories klatka3=new Accessories("Stal","","900","10X6M","","");
-        Accessories karma1=new Accessories("","Royal Canin","","120","","1kg");
-        Accessories karma2=new Accessories("","Brit Care","","55","","0.5kg");
-        Accessories karma3=new Accessories("","Rinti Gold","","11","","100g");
-        System.out.println("Login: ");
-import java.util.Scanner;
+ import java.util.Scanner;
 
 
 public class Main {
@@ -102,6 +79,9 @@ do{
                                 customer2.Kszczegoly();
                                 dalej = 1;
 
+                                break;
+                            case 5:
+                                dalej = 4;
                                 break;
 
 
