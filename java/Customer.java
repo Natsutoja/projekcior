@@ -13,7 +13,7 @@ public class Customer extends Person  {
      * @author Kacper Niewiadomski
      */
     public void Kdane(){
-        System.out.printf(imie + " " + nazwisko + " " + (staly ? "tak" : "nie") + "\n");
+        System.out.printf(" Imie: " + imie + "\n Nazwisko: " + nazwisko + "\n Staly klient:  " + (staly ? "tak" : "nie") + "\n");
     }
     /**
      * Wyswietla szczegolowe informacje o kliencie
@@ -21,7 +21,7 @@ public class Customer extends Person  {
      * @author Kacper Niewiadomski
      */
     public void Kszczegoly(){
-        System.out.println(imie + " " + nazwisko + " " + staly + " " + nrtel + " " + adress + " " + email + " " + wiek + "\n");
+        System.out.println(" Imie: " + imie + "\n Nazwisko: " + nazwisko + "\n Staly klient: " + (staly ? "tak" : "nie") + "\n Numer Telefonu: " + nrtel + "\n Adres: " + adress + "\n E-mail: " + email + "\n wiek: " + wiek + "\n");
     }
 
 }
