@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 
@@ -32,339 +33,350 @@ public class Main {
         Animals papuga2 = new Animals("Amazonka","500g","15 lat","samica ","2200");
         Animals papuga3 = new Animals("Nimfy","80g","4 lata","samica","120");
 
-            do {
-                System.out.println("1.logowanie   2.wyjście");
-                log = scanner.nextInt();
-                if (log == 1) {
-                    System.out.println("Login: ");
+        do {
+            System.out.println("1.logowanie   2.wyjście");
+            log = scanner.nextInt();
+            if (log == 1) {
+                System.out.println("Login: ");
 
+                login = scanner.nextLine();
+                if (login.equals("")) {
                     login = scanner.nextLine();
-                    if (login.equals("")) {
-                        login = scanner.nextLine();
-                    }
+                }
 
 
-                    System.out.println("Hasło: ");
+                System.out.println("Hasło: ");
 
-                    haslo = scanner.nextLine();
+                haslo = scanner.nextLine();
 
-                    if (login.equals("admin") && haslo.equals("admin")) {
+                if (login.equals("admin") && haslo.equals("admin")) {
 
 
-                        /**
-                         * Funkcja zmienna pozwala na wybranie konkretnych danych,które chcemy uzyskac(ogolnych lub szczegolowych)
-                         * Funkcja dalej pozwala na zapętlanie pętli lub przerwanie jej w dowolnym momencie.
-                         * @author Kamil Kuchciński
-                         * @author Kacper Niewiadomski
-                         */
-                        do {
-                            System.out.println("1.Dane  2.Sklep  3.wyloguj");
+                    /**
+                     * Funkcja zmienna pozwala na wybranie konkretnych danych,które chcemy uzyskac(ogolnych lub szczegolowych)
+                     * Funkcja dalej pozwala na zapętlanie pętli lub przerwanie jej w dowolnym momencie.
+                     * @author Kacper Niewiadomski
+                     */
+                    do {
+                        System.out.println("1.Dane  2.Sklep  3.wyloguj");
+                        try {
                             zmienna = scanner.nextInt();
                             switch (zmienna) {
                                 case 1:
                                     do {
                                         System.out.println("Dane: \n");
                                         System.out.println("1.Pracownicy dane    2.Pracownicy szczegóły    3.Klienci dane    4.Klienci szczegóły    5.wróć");
+                                        try {
+                                            zmienna = scanner.nextInt();
+                                            switch (zmienna) {
+                                                case 1:
+                                                    worker1.Dane();
+                                                    worker2.Dane();
+                                                    dalej = 1;
 
-                                        zmienna = scanner.nextInt();
-                                        switch (zmienna) {
-                                            case 1:
-                                                worker1.Dane();
-                                                worker2.Dane();
-                                                dalej = 1;
+                                                    break;
+                                                case 2:
+                                                    worker1.Szczegoly();
+                                                    worker2.Szczegoly();
+                                                    dalej = 1;
 
-                                                break;
-                                            case 2:
-                                                worker1.Szczegoly();
-                                                worker2.Szczegoly();
-                                                dalej = 1;
+                                                    break;
+                                                case 3:
+                                                    customer1.Kdane();
+                                                    customer2.Kdane();
+                                                    dalej = 1;
 
-                                                break;
-                                            case 3:
-                                                customer1.Kdane();
-                                                customer2.Kdane();
-                                                dalej = 1;
+                                                    break;
+                                                case 4:
+                                                    customer1.Kszczegoly();
+                                                    customer2.Kszczegoly();
+                                                    dalej = 1;
 
-                                                break;
-                                            case 4:
-                                                customer1.Kszczegoly();
-                                                customer2.Kszczegoly();
-                                                dalej = 1;
-
-                                                break;
-                                            case 5:
-                                                dalej = 0;
-                                                break;
+                                                    break;
+                                                case 5:
+                                                    dalej = 0;
+                                                    break;
 
 
-                                            default:
-                                                System.out.println("błąd");
+                                                default:
+                                                    System.out.println("błąd");
 
-                                                dalej = 1;
-                                                break;
+                                                    dalej = 1;
+                                                    break;
 
+                                            }
+
+                                    }catch(InputMismatchException e){
+                                            System.out.println("podano nieprawidłową wartość");
+                                            scanner.nextLine();
                                         }
-                                    } while (dalej == 1);
+                                } while (dalej == 1);
 
-                                    break;
-                                case 2:
-                                    do {
-                                        System.out.println("Klient:\n 1.Akcesoria   2.Zwierzęta   3.wróć");
-                                        zmienna = scanner.nextInt();
-                                        switch (zmienna) {
-                                            case 1:
-
-
-                                                do {
-                                                    System.out.println("Sklep: ");
-                                                    System.out.println("kategorie:\n 1.miski \n 2.klatki \n 3.karmy \n 4.wróć");
-                                                    zmienna = scanner.nextInt();
-                                                    switch (zmienna) {
-
-                                                        case 1:
-
-                                                            System.out.println("miski: ");
-                                                            System.out.println("1. ");
-                                                            miska1.Miska();
-                                                            System.out.println("2. ");
-                                                            miska2.Miska();
-                                                            System.out.println("3. ");
-                                                            miska3.Miska();
-                                                            System.out.println("4. wróć");
-                                                            zmienna = scanner.nextInt();
-                                                            switch (zmienna) {
-                                                                case 1:
-                                                                    dalej = 4;
-                                                                    break;
-                                                                case 2:
-                                                                    dalej = 4;
-                                                                    break;
-                                                                case 3:
-                                                                    dalej = 4;
-                                                                    break;
-                                                                case 4:
-                                                                    dalej = 4;
-                                                                    break;
-                                                                default:
-                                                                    System.out.println("Błąd");
-                                                                    dalej = 4;
-
-                                                            }
-
-                                                            break;
+                                break;
+                            case 2:
+                                do {
+                                    System.out.println("Admin:\n 1.Akcesoria   2.Zwierzęta   3.wróć");
+                                     zmienna = scanner.nextInt();
+                                     switch (zmienna) {
+                                        case 1:
 
 
-                                                        case 2:
-                                                            System.out.println("Klatki: ");
-                                                            System.out.println("1. ");
-                                                            klatka1.Klatka();
-                                                            System.out.println("2. ");
-                                                            klatka2.Klatka();
-                                                            System.out.println("3. ");
-                                                            klatka3.Klatka();
-                                                            System.out.println("4. wróć");
-                                                            zmienna = scanner.nextInt();
-                                                            switch (zmienna) {
-                                                                case 1:
-                                                                    dalej = 4;
-                                                                    break;
-                                                                case 2:
-                                                                    dalej = 4;
-                                                                    break;
-                                                                case 3:
-                                                                    dalej = 4;
-                                                                    break;
-                                                                case 4:
-                                                                    dalej = 4;
-                                                                    break;
-                                                                default:
-                                                                    System.out.println("Błąd");
-                                                                    dalej = 4;
+                                            do {
+                                                System.out.println("Sklep: ");
+                                                System.out.println("kategorie:\n 1.miski \n 2.klatki \n 3.karmy \n 4.wróć");
+                                                zmienna = scanner.nextInt();
+                                                switch (zmienna) {
 
-                                                            }
+                                                    case 1:
 
-                                                            break;
-                                                        case 3:
-                                                            System.out.println("karmy: ");
-                                                            System.out.println("1. ");
-                                                            karma1.Karma();
-                                                            System.out.println("2. ");
-                                                            karma2.Karma();
-                                                            System.out.println("3. ");
-                                                            karma3.Karma();
-                                                            System.out.println("4. wróć");
-                                                            zmienna = scanner.nextInt();
-                                                            switch (zmienna) {
-                                                                case 1:
-                                                                    dalej = 4;
-                                                                    break;
-                                                                case 2:
-                                                                    dalej = 4;
-                                                                    break;
-                                                                case 3:
-                                                                    dalej = 4;
-                                                                    break;
-                                                                case 4:
-                                                                    dalej = 4;
-                                                                    break;
-                                                                default:
-                                                                    System.out.println("Błąd");
-                                                                    dalej = 4;
+                                                        System.out.println("miski: ");
+                                                        System.out.println("1. ");
+                                                        miska1.Miska();
+                                                        System.out.println("2. ");
+                                                        miska2.Miska();
+                                                        System.out.println("3. ");
+                                                        miska3.Miska();
+                                                        System.out.println("4. wróć");
+                                                        zmienna = scanner.nextInt();
+                                                        switch (zmienna) {
+                                                            case 1:
+                                                                dalej = 4;
+                                                                break;
+                                                            case 2:
+                                                                dalej = 4;
+                                                                break;
+                                                            case 3:
+                                                                dalej = 4;
+                                                                break;
+                                                            case 4:
+                                                                dalej = 4;
+                                                                break;
+                                                            default:
+                                                                System.out.println("Błąd");
+                                                                dalej = 4;
 
-                                                            }
+                                                        }
 
-                                                            break;
-
-                                                        case 4:
-
-                                                            dalej = 3;
-                                                            break;
-
-                                                        default:
-                                                            System.out.println("Błąd");
-                                                            dalej = 4;
+                                                        break;
 
 
+                                                    case 2:
+                                                        System.out.println("Klatki: ");
+                                                        System.out.println("1. ");
+                                                        klatka1.Klatka();
+                                                        System.out.println("2. ");
+                                                        klatka2.Klatka();
+                                                        System.out.println("3. ");
+                                                        klatka3.Klatka();
+                                                        System.out.println("4. wróć");
+                                                        zmienna = scanner.nextInt();
+                                                        switch (zmienna) {
+                                                            case 1:
+                                                                dalej = 4;
+                                                                break;
+                                                            case 2:
+                                                                dalej = 4;
+                                                                break;
+                                                            case 3:
+                                                                dalej = 4;
+                                                                break;
+                                                            case 4:
+                                                                dalej = 4;
+                                                                break;
+                                                            default:
+                                                                System.out.println("Błąd");
+                                                                dalej = 4;
 
+                                                        }
 
-                                                    }
+                                                        break;
+                                                    case 3:
+                                                        System.out.println("karmy: ");
+                                                        System.out.println("1. ");
+                                                        karma1.Karma();
+                                                        System.out.println("2. ");
+                                                        karma2.Karma();
+                                                        System.out.println("3. ");
+                                                        karma3.Karma();
+                                                        System.out.println("4. wróć");
+                                                        zmienna = scanner.nextInt();
+                                                        switch (zmienna) {
+                                                            case 1:
+                                                                dalej = 4;
+                                                                break;
+                                                            case 2:
+                                                                dalej = 4;
+                                                                break;
+                                                            case 3:
+                                                                dalej = 4;
+                                                                break;
+                                                            case 4:
+                                                                dalej = 4;
+                                                                break;
+                                                            default:
+                                                                System.out.println("Błąd");
+                                                                dalej = 4;
+
+                                                        }
+
+                                                        break;
+
+                                                    case 4:
+
+                                                        dalej = 3;
+                                                        break;
+
+                                                    default:
+                                                        System.out.println("Błąd");
+                                                        dalej = 4;
 
 
 
-                                                } while (dalej == 4);
-                                                break;
-                                            case 2:
-                                                do {
-                                                    System.out.println("Zwierzaki: \n");
-                                                    System.out.println("kategorie:\n 1.chomiki \n 2.szczury \n 3.papugi \n 4.wróć");
-                                                    zmienna = scanner.nextInt();
-                                                    switch (zmienna) {
 
-                                                        case 1:
-
-                                                            System.out.println("Chomiki: ");
-                                                            System.out.println("1. ");
-                                                            chomik1.Zwierz();
-                                                            System.out.println("2. ");
-                                                            chomik2.Zwierz();
-                                                            System.out.println("3. ");
-                                                            chomik3.Zwierz();
-                                                            System.out.println("4. wróć");
-                                                            zmienna = scanner.nextInt();
-                                                            switch (zmienna) {
-                                                                case 1:
-                                                                    dalej = 4;
-                                                                    break;
-                                                                case 2:
-                                                                    dalej = 4;
-                                                                    break;
-                                                                case 3:
-                                                                    dalej = 4;
-                                                                    break;
-                                                                case 4:
-                                                                    dalej = 4;
-                                                                    break;
-                                                                default:
-                                                                    System.out.println("Błąd");
-                                                                    dalej = 4;
-
-                                                            }
-
-                                                            break;
+                                                }
 
 
-                                                        case 2:
-                                                            System.out.println(":Szczury ");
-                                                            System.out.println("1. ");
-                                                            szczur1.Zwierz();
-                                                            System.out.println("2. ");
-                                                            szczur2.Zwierz();
-                                                            System.out.println("3. ");
-                                                            szczur3.Zwierz();
-                                                            System.out.println("4. wróć");
-                                                            zmienna = scanner.nextInt();
-                                                            switch (zmienna) {
-                                                                case 1:
-                                                                    dalej = 4;
-                                                                    break;
-                                                                case 2:
-                                                                    dalej = 4;
-                                                                    break;
-                                                                case 3:
-                                                                    dalej = 4;
-                                                                    break;
-                                                                case 4:
-                                                                    dalej = 4;
-                                                                    break;
-                                                                default:
-                                                                    System.out.println("Błąd");
-                                                                    dalej = 4;
 
-                                                            }
+                                            } while (dalej == 4);
+                                            break;
+                                        case 2:
+                                            do {
+                                                System.out.println("Zwierzaki: \n");
+                                                System.out.println("kategorie:\n 1.chomiki \n 2.szczury \n 3.papugi \n 4.wróć");
+                                                zmienna = scanner.nextInt();
+                                                switch (zmienna) {
 
-                                                            break;
-                                                        case 3:
-                                                            System.out.println("Papugi: ");
-                                                            System.out.println("1. ");
-                                                            papuga1.Zwierz();
-                                                            System.out.println("2. ");
-                                                            papuga2.Zwierz();
-                                                            System.out.println("3. ");
-                                                            papuga3.Zwierz();
-                                                            System.out.println("4. wróć");
-                                                            zmienna = scanner.nextInt();
-                                                            switch (zmienna) {
-                                                                case 1:
-                                                                    dalej = 4;
-                                                                    break;
-                                                                case 2:
-                                                                    dalej = 4;
-                                                                    break;
-                                                                case 3:
-                                                                    dalej = 4;
-                                                                    break;
-                                                                case 4:
-                                                                    dalej = 4;
-                                                                    break;
-                                                                default:
-                                                                    System.out.println("Błąd");
-                                                                    dalej = 4;
+                                                    case 1:
 
-                                                            }
+                                                        System.out.println("Chomiki: ");
+                                                        System.out.println("1. ");
+                                                        chomik1.Zwierz();
+                                                        System.out.println("2. ");
+                                                        chomik2.Zwierz();
+                                                        System.out.println("3. ");
+                                                        chomik3.Zwierz();
+                                                        System.out.println("4. wróć");
+                                                        zmienna = scanner.nextInt();
+                                                        switch (zmienna) {
+                                                            case 1:
+                                                                dalej = 4;
+                                                                break;
+                                                            case 2:
+                                                                dalej = 4;
+                                                                break;
+                                                            case 3:
+                                                                dalej = 4;
+                                                                break;
+                                                            case 4:
+                                                                dalej = 4;
+                                                                break;
+                                                            default:
+                                                                System.out.println("Błąd");
+                                                                dalej = 4;
 
-                                                            break;
+                                                        }
 
-                                                        case 4:
-
-                                                            dalej = 3;
-                                                            break;
-                                                        default:
-                                                            System.out.println("Błąd");
-                                                            dalej = 4;
-
-                                                    }
-
-                                                } while (dalej == 4);
-                                            case 3:
-                                                dalej = 3;
-
-                                        }
-                                    }while (dalej == 3);
-                                    break;
-                                case 3:
+                                                        break;
 
 
-                                    dalej = 3;
-                                    break;
-                                default:
-                                    System.out.println("Błąd");
-                                    dalej = 0;
-                            }
-                        } while (dalej == 0);
+                                                    case 2:
+                                                        System.out.println(":Szczury ");
+                                                        System.out.println("1. ");
+                                                        szczur1.Zwierz();
+                                                        System.out.println("2. ");
+                                                        szczur2.Zwierz();
+                                                        System.out.println("3. ");
+                                                        szczur3.Zwierz();
+                                                        System.out.println("4. wróć");
+                                                        zmienna = scanner.nextInt();
+                                                        switch (zmienna) {
+                                                            case 1:
+                                                                dalej = 4;
+                                                                break;
+                                                            case 2:
+                                                                dalej = 4;
+                                                                break;
+                                                            case 3:
+                                                                dalej = 4;
+                                                                break;
+                                                            case 4:
+                                                                dalej = 4;
+                                                                break;
+                                                            default:
+                                                                System.out.println("Błąd");
+                                                                dalej = 4;
 
-                    } else if (login.equals("klient") && haslo.equals("kup")) {
-                        do {
-                            System.out.println("Klient:\n 1.Akcesoria   2.Zwierzęta   3.Wyloguj");
+                                                        }
+
+                                                        break;
+                                                    case 3:
+                                                        System.out.println("Papugi: ");
+                                                        System.out.println("1. ");
+                                                        papuga1.Zwierz();
+                                                        System.out.println("2. ");
+                                                        papuga2.Zwierz();
+                                                        System.out.println("3. ");
+                                                        papuga3.Zwierz();
+                                                        System.out.println("4. wróć");
+                                                        zmienna = scanner.nextInt();
+                                                        switch (zmienna) {
+                                                            case 1:
+                                                                dalej = 4;
+                                                                break;
+                                                            case 2:
+                                                                dalej = 4;
+                                                                break;
+                                                            case 3:
+                                                                dalej = 4;
+                                                                break;
+                                                            case 4:
+                                                                dalej = 4;
+                                                                break;
+                                                            default:
+                                                                System.out.println("Błąd");
+                                                                dalej = 4;
+
+                                                        }
+
+                                                        break;
+
+                                                    case 4:
+
+                                                        dalej = 3;
+                                                        break;
+                                                    default:
+                                                        System.out.println("Błąd");
+                                                        dalej = 4;
+
+                                                }
+
+                                            } while (dalej == 4);
+                                        case 3:
+                                            dalej = 3;
+
+                                    }
+                                }while (dalej == 3);
+                                break;
+                            case 3:
+
+
+                                dalej = 3;
+                                break;
+                            default:
+                                System.out.println("Błąd");
+                                dalej = 0;
+                        }
+                    }catch(InputMismatchException e){
+                            System.out.println("podano niepoprawną wartość");
+                            scanner.nextLine();
+                        }
+                    }
+                        while (dalej == 0);
+
+                } else if (login.equals("klient") && haslo.equals("kup")) {
+                    do {
+                        System.out.println("Klient:\n 1.Akcesoria   2.Zwierzęta   3.Wyloguj");
+                        try {
                             zmienna = scanner.nextInt();
                             switch (zmienna) {
                                 case 1:
@@ -373,118 +385,119 @@ public class Main {
                                     do {
                                         System.out.println("Sklep: ");
                                         System.out.println("kategorie:\n 1.miski \n 2.klatki \n 3.karmy \n 4.wróć");
-                                        zmienna = scanner.nextInt();
-                                        switch (zmienna) {
+                                        try {
+                                            zmienna = scanner.nextInt();
+                                            switch (zmienna) {
 
-                                            case 1:
+                                                case 1:
 
-                                                System.out.println("miski: ");
-                                                System.out.println("1. ");
-                                                miska1.Miska();
-                                                System.out.println("2. ");
-                                                miska2.Miska();
-                                                System.out.println("3. ");
-                                                miska3.Miska();
-                                                System.out.println("4. wróć");
-                                                zmienna = scanner.nextInt();
-                                                switch (zmienna) {
-                                                    case 1:
-                                                        dalej = 4;
-                                                        break;
-                                                    case 2:
-                                                        dalej = 4;
-                                                        break;
-                                                    case 3:
-                                                        dalej = 4;
-                                                        break;
-                                                    case 4:
-                                                        dalej = 4;
-                                                        break;
-                                                    default:
-                                                        System.out.println("Błąd");
-                                                        dalej = 4;
+                                                    System.out.println("miski: ");
+                                                    System.out.println("1. ");
+                                                    miska1.Miska();
+                                                    System.out.println("2. ");
+                                                    miska2.Miska();
+                                                    System.out.println("3. ");
+                                                    miska3.Miska();
+                                                    System.out.println("4. wróć");
+                                                    zmienna = scanner.nextInt();
+                                                    switch (zmienna) {
+                                                        case 1:
+                                                            dalej = 4;
+                                                            break;
+                                                        case 2:
+                                                            dalej = 4;
+                                                            break;
+                                                        case 3:
+                                                            dalej = 4;
+                                                            break;
+                                                        case 4:
+                                                            dalej = 4;
+                                                            break;
+                                                        default:
+                                                            System.out.println("Błąd");
+                                                            dalej = 4;
 
-                                                }
+                                                    }
 
-                                                break;
-
-
-                                            case 2:
-                                                System.out.println("Klatki: ");
-                                                System.out.println("1. ");
-                                                klatka1.Klatka();
-                                                System.out.println("2. ");
-                                                klatka2.Klatka();
-                                                System.out.println("3. ");
-                                                klatka3.Klatka();
-                                                System.out.println("4. wróć");
-                                                zmienna = scanner.nextInt();
-                                                switch (zmienna) {
-                                                    case 1:
-                                                        dalej = 4;
-                                                        break;
-                                                    case 2:
-                                                        dalej = 4;
-                                                        break;
-                                                    case 3:
-                                                        dalej = 4;
-                                                        break;
-                                                    case 4:
-                                                        dalej = 4;
-                                                        break;
-                                                    default:
-                                                        System.out.println("Błąd");
-                                                        dalej = 4;
-
-                                                }
-
-                                                break;
-                                            case 3:
-                                                System.out.println("karmy: ");
-                                                System.out.println("1. ");
-                                                karma1.Karma();
-                                                System.out.println("2. ");
-                                                karma2.Karma();
-                                                System.out.println("3. ");
-                                                karma3.Karma();
-                                                System.out.println("4. wróć");
-                                                zmienna = scanner.nextInt();
-                                                switch (zmienna) {
-                                                    case 1:
-                                                        dalej = 4;
-                                                        break;
-                                                    case 2:
-                                                        dalej = 4;
-                                                        break;
-                                                    case 3:
-                                                        dalej = 4;
-                                                        break;
-                                                    case 4:
-                                                        dalej = 4;
-                                                        break;
-                                                    default:
-                                                        System.out.println("Błąd");
-                                                        dalej = 4;
-
-                                                }
-
-                                                break;
-
-                                            case 4:
-
-                                                dalej = 5;
-                                                break;
-
-                                            default:
-                                                System.out.println("Błąd");
-                                                dalej = 4;
+                                                    break;
 
 
+                                                case 2:
+                                                    System.out.println("Klatki: ");
+                                                    System.out.println("1. ");
+                                                    klatka1.Klatka();
+                                                    System.out.println("2. ");
+                                                    klatka2.Klatka();
+                                                    System.out.println("3. ");
+                                                    klatka3.Klatka();
+                                                    System.out.println("4. wróć");
+                                                    zmienna = scanner.nextInt();
+                                                    switch (zmienna) {
+                                                        case 1:
+                                                            dalej = 4;
+                                                            break;
+                                                        case 2:
+                                                            dalej = 4;
+                                                            break;
+                                                        case 3:
+                                                            dalej = 4;
+                                                            break;
+                                                        case 4:
+                                                            dalej = 4;
+                                                            break;
+                                                        default:
+                                                            System.out.println("Błąd");
+                                                            dalej = 4;
+
+                                                    }
+
+                                                    break;
+                                                case 3:
+                                                    System.out.println("karmy: ");
+                                                    System.out.println("1. ");
+                                                    karma1.Karma();
+                                                    System.out.println("2. ");
+                                                    karma2.Karma();
+                                                    System.out.println("3. ");
+                                                    karma3.Karma();
+                                                    System.out.println("4. wróć");
+                                                    zmienna = scanner.nextInt();
+                                                    switch (zmienna) {
+                                                        case 1:
+                                                            dalej = 4;
+                                                            break;
+                                                        case 2:
+                                                            dalej = 4;
+                                                            break;
+                                                        case 3:
+                                                            dalej = 4;
+                                                            break;
+                                                        case 4:
+                                                            dalej = 4;
+                                                            break;
+                                                        default:
+                                                            System.out.println("Błąd");
+                                                            dalej = 4;
+
+                                                    }
+
+                                                    break;
+
+                                                case 4:
+
+                                                    dalej = 5;
+                                                    break;
+
+                                                default:
+                                                    System.out.println("Błąd");
+                                                    dalej = 4;
 
 
+                                            }
+                                        }catch(InputMismatchException e){
+                                            System.out.println("podano niepoprawną wartość");
+                                            scanner.nextLine();
                                         }
-
-
 
                                     } while (dalej == 4);
                                     break;
@@ -606,23 +619,27 @@ public class Main {
                                     dalej = 3;
 
                             }
-                        }while (dalej == 5);
-                    }
-                    else {
-                        System.out.println("nie prawidłowy login lub hasło");
-                        dalej = 3;
-                    }
-                    login = "";
-
+                        }catch(InputMismatchException e){
+                            System.out.println("podano niepoprawną wartość");
+                            dalej=5;
+                            scanner.nextLine();
+                        }
+                    }while (dalej == 5);
                 }
-                else if(log == 2){
-                    dalej = 8;
-                }
-                else{
-                    System.out.println("Błąd");
+                else {
+                    System.out.println("nie prawidłowy login lub hasło");
                     dalej = 3;
                 }
-            }while (dalej == 3) ;
-            }
-    }
+                login = "";
 
+            }
+            else if(log == 2){
+                dalej = 8;
+            }
+            else{
+                System.out.println("Błąd");
+                dalej = 3;
+            }
+        }while (dalej == 3) ;
+    }
+}
