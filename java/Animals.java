@@ -13,7 +13,12 @@ public class Animals {
         this.cena=cena;
     }
 
-  public void zwierz(){
+    /**
+     * Wyswietla ogolne informacje na temat wszystkich zwierzat w sklepie
+     * @author Kamil Kuchciński
+     * @author Kacper Niewiadomski
+     */
+  public void Zwierz(){
       System.out.println("gatunek: " + gatunek + "\n samiec: " + plec + "\n wiek: " + wiek + "\n waga: " + waga + "\n cena: " + cena + "zl");
   }
 
