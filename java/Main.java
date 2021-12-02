@@ -44,7 +44,7 @@ public class Main {
                 System.out.println("podano niepoprawną wartość");
                 scanner.nextLine();
             }
-             if (log == 1) {
+            if (log == 1) {
                 System.out.println("Login: ");
 
                 login = scanner.nextLine();
@@ -751,18 +751,29 @@ public class Main {
                                         System.out.println("razy: " + pap3 + "\n");
 
                                     }
-                                    System.out.println("suma: " + suma + "zl"+ "\n");
-                                    System.out.println("1.Zapłać   2.wróć");
-                                    zmienna = scanner.nextInt();
-                                    switch (zmienna){
-                                        case 1:
-                                            dalej = 20;
-                                            System.out.println("zapłacono");
-                                            break;
-                                        case 2:
-                                            dalej = 5;
-                                            break;
+                                    if(mis1 == 0 && mis2 == 0 && mis3 == 0 && kla1 == 0 && kla2 == 0 && kla3 == 0
+                                            && kar1 == 0 && kar2 == 0 && kar3 == 0 && cho1 == 0 && cho2 == 0  && cho3 == 0
+                                            && szc1 == 0 && szc2 == 0  && szc3 == 0  && pap1 == 0 && pap2 == 0 && pap3 == 0) {
+                                        dalej = 5;
+                                        System.out.println("jest pusty");
                                     }
+                                    else{
+
+                                        System.out.println("suma: " + suma + "zl" + "\n");
+                                        System.out.println("1.Zapłać   2.wróć");
+                                        zmienna = scanner.nextInt();
+                                        switch (zmienna) {
+                                            case 1:
+                                                dalej = 20;
+                                                System.out.println("zapłacono");
+                                                break;
+                                            case 2:
+                                                dalej = 5;
+                                                break;
+                                        }
+                                        }
+
+
 
 
 
