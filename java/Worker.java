@@ -13,15 +13,13 @@ public class Worker extends Person  {
     /**
      * Wyswietla ogolne informacje o  pracowniku
      * @author Kamil Kuchciński
-     * @author Kacper Niewiadomski
      */
     public void Dane(){
-        System.out.printf("Imie: " + imie + "\n" + "Nazwisko: " + nazwisko + "\n" + "Stanowisko: " + stanowisko + "\n" + "placa: " + placa + "\n");
+        System.out.printf("Imie: " + imie + "\n" + "Nazwisko: " + nazwisko + "\n" + "Stanowisko: " + stanowisko + "\n" + "placa: " + placa + "\n\n");
     }
     /**
      * Wyswietla szczegolowe informacje o pracowniku
      * @author Kamil Kuchciński
-     * @author Kacper Niewiadomski
      */
     public void Szczegoly(){
         System.out.println("Imie: " + imie + "\n" + "Nazwisko: " + nazwisko + "\n" + "Stanowisko: " + stanowisko + "\n" + "placa: " + placa + "\n" + "numer telefonu: " + nrtel + "\n" + "Adres: " + adress + "\n" + "E-mail: " + email + "\n" + "Id: " + id + "\n");
