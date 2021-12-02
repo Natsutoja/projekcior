@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         int zmienna;
         int dalej = 0;
-        int log;
+        int log = 0;
         int mis1=0,mis2=0,mis3=0,kla1=0,kla2=0,kla3=0,kar1=0,kar2=0,kar3=0;
         int pap1=0,pap2=0,pap3=0,cho1=0,cho2=0,cho3=0,szc1=0,szc2=0,szc3=0;
         int suma =0;
@@ -37,9 +37,14 @@ public class Main {
         Animals papuga3 = new Animals("Nimfy","80g","4 lata","samica","120");
 
         do {
-            System.out.println("1.logowanie   2.wyjście");
-            log = scanner.nextInt();
-            if (log == 1) {
+            try {
+                System.out.println("1.logowanie   2.wyjście");
+                log = scanner.nextInt();
+            }catch(InputMismatchException e){
+                System.out.println("podano niepoprawną wartość");
+                scanner.nextLine();
+            }
+             if (log == 1) {
                 System.out.println("Login: ");
 
                 login = scanner.nextLine();
@@ -659,94 +664,94 @@ public class Main {
                                     System.out.println("Koszyk:");
                                     if(mis1>0) {
                                         miska1.Miska();
-                                        System.out.println("razy: " + mis1);
+                                        System.out.println("razy: " + mis1 + "\n");
                                     }
                                     if(mis2>0) {
                                         miska2.Miska();
-                                        System.out.println("razy: " + mis2);
+                                        System.out.println("razy: " + mis2 + "\n");
 
                                     }
                                     if(mis3>0) {
                                         miska3.Miska();
-                                        System.out.println("razy: " + mis3);
+                                        System.out.println("razy: " + mis3 + "\n");
 
                                     }
                                     if(kla1>0) {
                                         klatka1.Klatka();
-                                        System.out.println("\nrazy: " + kla1);
+                                        System.out.println("\nrazy: " + kla1 + "\n");
 
                                     }
                                     if(kla2>0) {
                                         klatka2.Klatka();
-                                        System.out.println("\nrazy: " + kla2);
+                                        System.out.println("\nrazy: " + kla2 + "\n");
 
                                     }
                                     if(kla3>0) {
                                         klatka3.Klatka();
-                                        System.out.println("\nrazy: " + kla3);
+                                        System.out.println("\nrazy: " + kla3 + "\n");
 
                                     }
                                     if(kar1>0) {
                                         karma1.Karma();
-                                        System.out.println("razy: " + kar1);
+                                        System.out.println("razy: " + kar1 + "\n");
 
                                     }
                                     if(kar2>0) {
                                         karma2.Karma();
-                                        System.out.println("razy: " + kar2);
+                                        System.out.println("razy: " + kar2 + "\n");
 
                                     }
                                     if(kar3>0) {
                                         karma3.Karma();
-                                        System.out.println("razy: " + kar3);
+                                        System.out.println("razy: " + kar3 + "\n");
 
                                     }
                                     if(cho1>0) {
                                         chomik1.Zwierz();
-                                        System.out.println("razy: " + cho1);
+                                        System.out.println("razy: " + cho1 + "\n");
 
                                     }
                                     if(cho2>0) {
                                         chomik2.Zwierz();
-                                        System.out.println("razy: " + cho2);
+                                        System.out.println("razy: " + cho2 + "\n");
 
                                     }
                                     if(cho3>0) {
                                         chomik3.Zwierz();
-                                        System.out.println("razy: " + cho3);
+                                        System.out.println("razy: " + cho3 + "\n");
 
                                     }
                                     if(szc1>0) {
                                         szczur1.Zwierz();
-                                        System.out.println("razy: " + szc1);
+                                        System.out.println("razy: " + szc1 + "\n");
 
                                     }
                                     if(szc2>0) {
                                         szczur2.Zwierz();
-                                        System.out.println("razy: " + szc2);
+                                        System.out.println("razy: " + szc2 + "\n");
 
                                     }
                                     if(szc3>0) {
                                         szczur3.Zwierz();
-                                        System.out.println("razy: " + szc3);
+                                        System.out.println("razy: " + szc3 + "\n");
 
                                     }
                                     if(pap1>0) {
                                         papuga1.Zwierz();
-                                        System.out.println("razy: " + pap1);
+                                        System.out.println("razy: " + pap1 + "\n");
 
                                     }
                                     if(pap2>0) {
                                         papuga2.Zwierz();
-                                        System.out.println("razy: " + pap2);
+                                        System.out.println("razy: " + pap2 + "\n");
 
                                     }
                                     if(pap3>0) {
                                         papuga3.Zwierz();
-                                        System.out.println("razy: " + pap3);
+                                        System.out.println("razy: " + pap3 + "\n");
 
                                     }
-                                    System.out.println("suma: " + suma + "zl");
+                                    System.out.println("suma: " + suma + "zl"+ "\n");
                                     System.out.println("1.Zapłać   2.wróć");
                                     zmienna = scanner.nextInt();
                                     switch (zmienna){
@@ -785,7 +790,7 @@ public class Main {
                 dalej = 8;
             }
             else{
-                System.out.println("Błąd");
+                System.out.println("");
                 dalej = 3;
             }
         }while (dalej == 3) ;
