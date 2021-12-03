@@ -413,17 +413,20 @@ public class Main {
                                                             mis1++;
                                                             dalej = 4;
                                                             suma = suma + 25;
+                                                            System.out.println("Pomyślnie dodano do koszyka");
 
                                                             break;
                                                         case 2:
                                                             mis2++;
                                                             dalej = 4;
                                                             suma = suma + 17;
+                                                            System.out.println("Pomyślnie dodano do koszyka");
                                                             break;
                                                         case 3:
                                                             mis3++;
                                                             dalej = 4;
                                                             suma = suma + 11;
+                                                            System.out.println("Pomyślnie dodano do koszyka");
                                                             break;
                                                         case 4:
                                                             dalej = 4;
@@ -452,16 +455,19 @@ public class Main {
                                                             kla1++;
                                                             dalej = 4;
                                                             suma = suma + 300;
+                                                            System.out.println("Pomyślnie dodano do koszyka");
                                                             break;
                                                         case 2:
                                                             kla2++;
                                                             dalej = 4;
                                                             suma = suma + 600;
+                                                            System.out.println("Pomyślnie dodano do koszyka");
                                                             break;
                                                         case 3:
                                                             kla3++;
                                                             dalej = 4;
                                                             suma = suma + 900;
+                                                            System.out.println("Pomyślnie dodano do koszyka");
                                                             break;
                                                         case 4:
                                                             dalej = 4;
@@ -488,16 +494,19 @@ public class Main {
                                                             kar1++;
                                                             dalej = 4;
                                                             suma = suma + 120;
+                                                            System.out.println("Pomyślnie dodano do koszyka");
                                                             break;
                                                         case 2:
                                                             kar2++;
                                                             dalej = 4;
                                                             suma = suma + 55;
+                                                            System.out.println("Pomyślnie dodano do koszyka");
                                                             break;
                                                         case 3:
                                                             kar3++;
                                                             dalej = 4;
                                                             suma = suma + 11;
+                                                            System.out.println("Pomyślnie dodano do koszyka");
                                                             break;
                                                         case 4:
                                                             dalej = 4;
@@ -551,16 +560,19 @@ public class Main {
                                                         cho1++;
                                                         dalej = 4;
                                                         suma = suma + 35;
+                                                        System.out.println("Pomyślnie dodano do koszyka");
                                                         break;
                                                     case 2:
                                                         cho2++;
                                                         dalej = 4;
                                                         suma = suma + 50;
+                                                        System.out.println("Pomyślnie dodano do koszyka");
                                                         break;
                                                     case 3:
                                                         cho3++;
                                                         dalej = 4;
                                                         suma = suma + 20;
+                                                        System.out.println("Pomyślnie dodano do koszyka");
                                                         break;
                                                     case 4:
                                                         dalej = 4;
@@ -589,16 +601,19 @@ public class Main {
                                                         szc1++;
                                                         dalej = 4;
                                                         suma = suma + 15;
+                                                        System.out.println("Pomyślnie dodano do koszyka");
                                                         break;
                                                     case 2:
                                                         szc2++;
                                                         dalej = 4;
                                                         suma = suma + 25;
+                                                        System.out.println("Pomyślnie dodano do koszyka");
                                                         break;
                                                     case 3:
                                                         szc3++;
                                                         dalej = 4;
                                                         suma = suma + 30;
+                                                        System.out.println("Pomyślnie dodano do koszyka");
                                                         break;
                                                     case 4:
                                                         dalej = 4;
@@ -625,16 +640,19 @@ public class Main {
                                                         pap1++;
                                                         dalej = 4;
                                                         suma = suma + 10000;
+                                                        System.out.println("Pomyślnie dodano do koszyka");
                                                         break;
                                                     case 2:
                                                         pap2++;
                                                         dalej = 4;
                                                         suma = suma + 2200;
+                                                        System.out.println("Pomyślnie dodano do koszyka");
                                                         break;
                                                     case 3:
                                                         pap3++;
                                                         dalej = 4;
                                                         suma = suma + 120;
+                                                        System.out.println("Pomyślnie dodano do koszyka");
                                                         break;
                                                     case 4:
                                                         dalej = 4;
@@ -781,7 +799,24 @@ public class Main {
                                     break;
                                 case 4:
                                     dalej = 3;
-
+                                    mis1=0;
+                                    mis2=0;
+                                    mis3=0;
+                                    kla1=0;
+                                    kla2=0;
+                                    kla3=0;
+                                    kar1=0;
+                                    kar2=0;
+                                    kar3=0;
+                                    pap1=0;
+                                    pap2=0;
+                                    pap3=0;
+                                    cho1=0;
+                                    cho2=0;
+                                    cho3=0;
+                                    szc1=0;
+                                    szc2=0;
+                                    szc3=0;
                             }
                         }catch(InputMismatchException e){
                             System.out.println("podano niepoprawną wartość");
